@@ -4,22 +4,24 @@
 int front=-1,rear=-1;
 int queue[SIZE],n;
 void insert(int item){
-if((front==0&&rear==SIZE-1)||(front==rear+1))
+if((front==0&&rear==SIZE-1)||(front==rear+1)){
     printf("Queue is full\n");
-    else
+    return;}
+    else{
     rear=(rear+1)%SIZE;
     queue[rear]=item;
     if(front==-1)
     front=0;
     }
+    }
 int delete(){
     int elem;
-if(front==-1 && rear==-1)
-    printf("Queue is empty\n");
+if(front==-1 && rear==-1){
+    printf("Queue is empty\n");}
     else{
         elem=queue[front];
         printf("Deleted element is : %d",elem);
-         if(front>rear){
+         if(front==rear){
         front=-1;
         rear=-1;
          }
@@ -30,8 +32,9 @@ if(front==-1 && rear==-1)
 }
 void display(){
     int i;
-if(front==-1&&rear==-1)
+if(front==-1&&rear==-1){
     printf("Queue is empty!!\n");
+    return;}
 else{
     i=front;
 do{
@@ -61,4 +64,3 @@ default : exit(0);
 }
 }
 }
-
