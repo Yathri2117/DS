@@ -88,21 +88,6 @@ void sort(){
     }
     sdisplay();
 }
-void sdisplay(){
-struct list1 *temp1=head1;
-struct list2 *temp2=head2;
-printf("\nContents of 1st list:\n");
-while(temp1!=NULL)
-    {
-        printf("%d\t",temp1->data1);
-        temp1=temp1->next1;
-    }
-printf("\nContents of 2nd list :\n");
-while(temp2!=NULL)
-{
-    printf("%d\t",temp2->data2);
-    temp2=temp2->next2;
-}}
 void reverse(){
 struct list1 *cu1,*pre1,*temp1;
 struct list2 *cu2,*pre2,*temp2;
@@ -128,22 +113,6 @@ while (cu2!=NULL)
     cu2=temp2;
 }
 head2=pre2;
-}
-void rdisplay(){
-struct list1 *temp1=head1;
-struct list2 *temp2=head2;
-printf("\nContents of 1st list:\n");
-while(temp1!=NULL)
-    {
-        printf("%d\t",temp1->data1);
-        temp1=temp1->next1;
-    }
-printf("\nContents of 2nd list :\n");
-while(temp2!=NULL)
-{
-    printf("%d\t",temp2->data2);
-    temp2=temp2->next2;
-}
 }
 void concate(){
 struct list1 *temp1=head1;
@@ -181,9 +150,10 @@ case 1: insert();
 display();
 break;
 case 2:sort();
+display();
 break;
 case 3: reverse();
-rdisplay();
+display();
 break;
 case 4: concate();
 break;
