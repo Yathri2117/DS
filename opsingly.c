@@ -86,7 +86,7 @@ void sort(){
     }
     temp2=temp2->next2;
     }
-    sdisplay();
+    display();
 }
 void reverse(){
 struct list1 *cu1,*pre1,*temp1;
@@ -150,7 +150,6 @@ case 1: insert();
 display();
 break;
 case 2:sort();
-display();
 break;
 case 3: reverse();
 display();
