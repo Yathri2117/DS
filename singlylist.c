@@ -47,15 +47,6 @@ while(temp->next!=NULL){
 temp->next=newnode;
 }
 }
-void display2(){
-struct list *temp=head;
-printf("\nContents of the list is :\n");
-while(temp!=NULL)
-    {
-        printf("%d\t",temp->data);
-        temp=temp->next;
-    }
-}
 void specific(){
     int pos;
 printf("Enter the value to insert into the list:");
@@ -78,15 +69,6 @@ newnode->next=temp->next;
 temp->next=newnode;
 }
 }
-void display3(){
-struct list *temp=head;
-printf("\nContents of the list is :\n");
-while(temp!=NULL)
-    {
-        printf("%d\t",temp->data);
-        temp=temp->next;
-    }
-}
 void main(){
 int ch;
 while(1){
@@ -97,10 +79,10 @@ case 1: start();
 display1();
 break;
 case 2 : end();
-display2();
+display();
 break;
 case 3: specific();
-display3();
+display();
 break;
 case 4: exit(0);
 break;
