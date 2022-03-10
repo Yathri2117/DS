@@ -36,7 +36,7 @@ case 1: insert();
 break;
 case 2 : delete();
 break;
-case 3: display1();
+case 3: display();
 break;
 case 4: exit(0);
 break;
@@ -117,16 +117,6 @@ if(head==NULL)
         head=head->next;
         free(temp);
     }}
-
-void display1(){
-struct list *temp=head;
-printf("\nContents of the queue is :\n");
-while(temp!=NULL)
-    {
-        printf("%d\t",temp->data);
-        temp=temp->next;
-    }}
-
 void main(){
 int ch;
 while(1){
