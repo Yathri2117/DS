@@ -42,15 +42,6 @@ if(head==NULL)
         free(temp);
     }
 }
-void display1(){
-struct list *temp=head;
-printf("\nContents of the list is :\n");
-while(temp!=NULL)
-    {
-        printf("%d\t",temp->data);
-        temp=temp->next;
-    }
-}
 void end(){
 struct list *temp,*pre;
 if(head==NULL)
@@ -67,15 +58,6 @@ if(head==NULL)
         }
         pre->next=NULL;
         free(temp);
-    }
-}
-void display2(){
-struct list *temp=head;
-printf("\nContents of the list is :\n");
-while(temp!=NULL)
-    {
-        printf("%d\t",temp->data);
-        temp=temp->next;
     }
 }
 void specific(){
@@ -98,17 +80,6 @@ if(head==NULL)
     pre->next=temp->next;
     free(temp);
 }
-void display3(){
-struct list *temp=head;
-printf("\nContents of the list is :\n");
-while(temp!=NULL)
-    {
-        printf("%d\t",temp->data);
-        temp=temp->next;
-    }
-}
-
-
 void main(){
 int ch;
 while(1){
@@ -119,13 +90,13 @@ case 1: insert();
 display();
 break;
 case 2: start();
-display1();
+display();
 break;
 case 3 : end();
-display2();
+display();
 break;
 case 4: specific();
-display3();
+display();
 break;
 case 5: exit(0);
 break;
